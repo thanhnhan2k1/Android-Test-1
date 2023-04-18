@@ -5,9 +5,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/tabbar"
+        app:tabIndicator="@drawable/tabbar_indicator"
+        android:layout_alignParentTop="true"
+        app:tabIndicatorGravity="stretch"
+        />
     <androidx.viewpager.widget.ViewPager
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@id/tablayout"
         android:layout_above="@id/bottomNav"
         android:id="@+id/viewPager"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
