@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="5dp"
+    android:backgroundTint="@color/blue">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName"
+            android:text="Thợ may"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:gravity="center"
+            android:layout_marginLeft="10dp"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvContent"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginLeft="10dp"
+            android:text="Tạo ra các bộ quần áo"
+            android:textSize="16dp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="30/04/2023"
+            android:id="@+id/tvDate"
+            android:layout_marginLeft="10dp"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Chưa hoàn thành"
+            android:id="@+id/tvStatus"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+        <TextView
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content"
+            android:text="Một mình"
+            android:id="@+id/tvCollaborate"
+            android:textSize="16dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
