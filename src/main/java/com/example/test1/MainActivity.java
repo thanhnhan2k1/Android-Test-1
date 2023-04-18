@@ -14,10 +14,12 @@ import com.example.test1.adapter.ViewPagerAdapter;
 import com.example.test1.database.Database;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
     private BottomNavigationView bottom;
     private ViewPager viewPager;
+    private TabLayout tab;
     private FloatingActionButton fab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         bottom=findViewById(R.id.bottomNav);
         viewPager=findViewById(R.id.viewPager);
         fab = findViewById(R.id.fab);
+        tab = findViewById(R.id.tablayout);
         Database db = new Database(this);
 
         fab.setOnClickListener(new View.OnClickListener() {
@@ -37,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
         });
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);
+        tab.setupWithViewPager(viewPager);
+        tab.getTabAt(0).setIcon(R.drawable.baseline_list_alt_24);
+        tab.getTabAt(1).setIcon(R.drawable.baseline_info_24);
+        tab.getTabAt(2).setIcon(R.drawable.baseline_person_search_24);
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
